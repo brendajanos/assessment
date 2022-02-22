@@ -24,8 +24,20 @@ code {
 }
 
 .CalculatorWrapper {
-  display: flex;
-  flex: 2;
+  display: block;
   align-items: center;
   justify-content: center;
+  max-width: 300px;
+}
+.InputWrapper {
+  display: block;
+  align-items: center;
+  align-content: center;
+  position: fixed !important;
+  width: 500px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px; 
+  margin-left: -250px; 
 }
