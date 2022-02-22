@@ -43,7 +43,7 @@ const Calculator2 = () => {
   function numbersToWords(s) {
     s = s.toString();
     s = s.replace(/[\, ]/g, "");
-    if (s != parseFloat(s)) return "not a number";
+    if (s != parseFloat(s)) return "Type a number";
     var x = s.indexOf(".");
     if (x == -1) x = s.length;
     if (x > 15) return "too big";
@@ -81,14 +81,19 @@ const Calculator2 = () => {
 
   return (
     <div>
-      <div className="CalculatorWrapper">
+      <div className="Title">
+        <h1>Number Conversion Tool</h1>
+      </div>
+      <div className="InputWrapper">
         <input
           type="number"
           value={input}
           onChange={(event) => setInput(event.target.value)}
         />
       </div>
+      <div className="Words">
       <h1>{numbersToWords(input)}</h1>
+      </div>
     </div>
   );
 };
